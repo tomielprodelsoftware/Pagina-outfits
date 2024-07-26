@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>OutFitters</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/aa5bdb4c90.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!--Empieza seccion de head -->
+
+  <section class="head"> 
+    <div class="prendas"> 
+      <h1> Prendas </h1> 
+    </div>
+    <div class="outfits">
+      <h1> Outfits </h1>
+    </div>
+  </section>
+
+  <!--Termina seccion de head -->
+
+  <!--Boton de crear outfit -->
+
+  <div class="boton-crear"> 
+    <button id="openModalBtn" class="boton">
+      + Nueva prenda
+    </button>
+  </div>
+  
+  <!--Fotos de las prendas -->
+
+  <div class="container">
+    <img src="outfit-pagina/bermuda.png" alt="">
+    <img src="outfit-pagina/jogging.png" alt="">
+    <img src="outfit-pagina/campera.png" alt="">
+    <img src="outfit-pagina/gorrito-mea-culpa.png" alt="">
+    <img src="outfit-pagina/gorra-marron.png" alt="">
+    <img src="outfit-pagina/remera-manga-larga.png" alt="">
+    <img src="outfit-pagina/zapas.png" alt="">
+    <img src="outfit-pagina/buzo.png" alt="">   
+    <img src="outfit-pagina/rojo.png" alt=""> 
+    <img src="outfit-pagina/gris.png" alt="">
+    <img src="outfit-pagina/estrella.png" alt="">
+  </div>
+
+  <!--Ventana de crear prenda -->
+
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span id="closeModalBtn" class="close">&times;</span>
+      <h2 class="nombre-de-prenda">Nombre</h2>
+      <i class="fa-solid fa-arrow-pointer fa-4x"></i>
+      <p class="info-prenda">Se requiere una foto de frente y otra de detras de la prenda</p>
+      <button class="boton-subir-prenda"> Subir prenda frontal </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
