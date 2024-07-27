@@ -17,7 +17,7 @@ def index():
 
 @app.route('/outfits')
 def outfits():
-    return render_template('/templates/outfits.html')
+    return render_template('outfits.html')
 
 @app.route('/upload', methods=['GET', 'POST'])
 def upload_file():
@@ -29,6 +29,10 @@ def upload_file():
             return redirect(request.url)
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            return redirect(url_for('index'))
+    return render_template('upload.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
+
