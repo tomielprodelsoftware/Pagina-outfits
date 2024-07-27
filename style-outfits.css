@@ -22,22 +22,27 @@ body {
 
 .prendas {
   border-right: none; /* Quita el borde derecho del primer div */
-  border-bottom: 2px solid black;
   padding-top: 7px;
   padding-bottom: 10px;
   height: fit-content;
+  opacity: 0.6;
   flex: 1;
   display: flex;
   justify-content: center;
   box-sizing: border-box;
   margin-top: 10px;
   margin-right: 10px;
+  transition: 0.4s;
+}
+
+.prendas:hover{
+  opacity: 0.9;
 }
 
 .outfits{
   border-left: none; /* Quita el borde izquierdo del segundo div */
   height: fit-content;
-  opacity: 0.6;
+  border-bottom: 2px solid black;
   padding-top: 7px;
   padding-bottom: 10px;
   flex: 1;
@@ -45,11 +50,6 @@ body {
   justify-content: center;
   box-sizing: border-box;
   margin-top: 10px;
-  transition: 0.4s;
-}
-
-.outfits:hover{
-  opacity: 0.9;
 }
 
 h1 {
@@ -88,26 +88,3 @@ h1 {
 .boton:hover{
   opacity: 0.8;
 }
-
-.container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 20px;
-  padding: 20px;
-  align-items: center; /* Alinea verticalmente los elementos dentro del grid */
-}
-
-.container img {
-  width: 100%;
-  height: auto;
-  object-fit: cover; /* Ajusta las imágenes sin deformarlas */
-  align-self: center; /* Centra verticalmente la imagen dentro de su celda */
-  transition: 0.4s;
-}
-
-.container img:hover {
-  scale: 1.1;
-}
-
-
-
