@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>OutFitters</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+    <script src="https://kit.fontawesome.com/aa5bdb4c90.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!--Empieza seccion de head -->
+  <section class="head"> 
+    <div class="prendas"> 
+      <h1> Prendas </h1> 
+    </div>
+    <div class="outfits">
+      <a class="link-paginas" href="{{ url_for('outfits') }}">
+        <h1> OutFits </h1>
+      </a>
+    </div>
+  </section>
+  <!--Termina seccion de head -->
+
+  <!--Boton de crear outfit -->
+  <div class="boton-crear"> 
+    <button id="openModalBtn" class="boton">
+      + Nueva prenda
+    </button>
+  </div>
+  
+  <!--Fotos de las prendas -->
+  <div class="container">
+    {% for image in images %}
+            <img src="{{ url_for('static', filename='uploads/' + image) }}" alt="{{ image }}">
+        {% endfor %}
+  </div>
+
+  <!--Ventana de crear prenda -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span id="closeModalBtn" class="close">&times;</span>
+      <h2 class="nombre-de-prenda">Nombre</h2>
+      <i class="fa-solid fa-arrow-pointer fa-4x"></i>
+      <p class="info-prenda">Se requiere una foto de frente y otra de detras de la prenda</p>
+      <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Subir prenda frontal" class="boton-subir-prenda">
+      </form>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='scripts/script.js') }}"></script>
+
+</body>
+</html>

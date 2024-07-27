@@ -1,0 +1,90 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  justify-content: center;
+  background-color: #f0f0f0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.head {
+  display: flex;
+  width: 100%;
+  height: 40px;
+  
+}
+
+.link-paginas{
+  text-decoration: none; /* Elimina el subrayado */
+  color: inherit; /* Usa el color del texto del contenedor */
+}
+
+.prendas {
+  border-right: none; /* Quita el borde derecho del primer div */
+  padding-top: 7px;
+  padding-bottom: 10px;
+  height: fit-content;
+  opacity: 0.6;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  margin-top: 10px;
+  margin-right: 10px;
+  transition: 0.4s;
+}
+
+.prendas:hover{
+  opacity: 0.9;
+}
+
+.outfits{
+  border-left: none; /* Quita el borde izquierdo del segundo div */
+  height: fit-content;
+  border-bottom: 2px solid black;
+  padding-top: 7px;
+  padding-bottom: 10px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+
+h1 {
+  margin: 0;
+}
+
+.boton-crear {
+  width: 100%; /* Ocupa el 100% de la anchura de la página */
+  display: flex;
+  justify-content: center; /* Centra el botón horizontalmente */
+  padding-top: 25px;
+}
+
+.boton {
+  font-size: 17px;
+  padding: 20px; /* Añade padding uniforme en todos los lados */
+  margin-top: 10px;
+  background-color: #c2c2c2;
+  color: #000000;
+  height: max-content;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center; /* Centra el texto horizontalmente */
+  display: flex; /* Usa flexbox para alinear el contenido */
+  align-items: center; /* Centra verticalmente el texto dentro del botón */
+  justify-content: center; /* Centra horizontalmente el texto dentro del botón */
+  font-weight: bolder;
+  transition: 0.4s;
+}
+
+.boton:active{
+  scale: 0.95;
+}
+
+.boton:hover{
+  opacity: 0.8;
+}
