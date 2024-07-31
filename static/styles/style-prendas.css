@@ -106,6 +106,7 @@ h1 {
 }
 
 .container img:hover {
+  scale: 1.1;
 }
 
 

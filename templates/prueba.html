@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outfit Completo</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        img {
+            max-width: 100px;
+            max-height: 100px;
+            cursor: pointer;
+        }
+        .modal {
+            display: none; /* Ocultar por defecto */
+            position: fixed; 
+            z-index: 1; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgb(0,0,0); 
+            background-color: rgba(0,0,0,0.4); 
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; 
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="outfit-completo">
+            <div class="cabeza">
+                <img src="/static/uploads/gorrito-mea-culpa.png" alt="Gorrito Mea Culpa" data-info="Información sobre el gorrito Mea Culpa.">
+            </div>
+            <div class="torso">
+                <img src="/static/uploads/buzo.png" alt="Buzo" data-info="Información sobre el buzo.">
+            </div>
+            <div class="piernas">
+                <img src="/static/uploads/jogging.png" alt="Jogging" data-info="Información sobre el jogging.">
+            </div>
+            <div class="pies">
+                <img src="/static/uploads/zapas.png" alt="Zapas" data-info="Información sobre las zapas.">
+            </div>
+        </div>
+    </div>
+
+    <!-- Ventana Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modalText"></p>
+        </div>
+    </div>
+
+    <script>
+        // Obtener el modal
+        var modal = document.getElementById("myModal");
+
+        // Obtener el elemento <span> que cierra el modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // Obtener el elemento <p> dentro del modal donde se mostrará la información
+        var modalText = document.getElementById("modalText");
+
+        // Obtener todas las imágenes con la clase "cabeza", "torso", "piernas", "pies"
+        var images = document.querySelectorAll('.cabeza img, .torso img, .piernas img, .pies img');
+
+        // Añadir un evento de clic a cada imagen
+        images.forEach(function(image) {
+            image.onclick = function() {
+                modal.style.display = "block";
+                modalText.innerText = image.getAttribute("data-info");
+            }
+        });
+
+        // Cuando el usuario hace clic en <span> (x), cerrar el modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Cuando el usuario hace clic en cualquier lugar fuera del modal, cerrarlo
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

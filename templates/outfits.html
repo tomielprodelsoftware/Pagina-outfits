@@ -5,9 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>OutFitters</title>
   <link rel="stylesheet" href="/static/styles/style-outfits.css">
+  <link rel="stylesheet" href="/static/styles/style-ventana-prenda.css" 
   <script src="https://kit.fontawesome.com/aa5bdb4c90.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
 
   <!--Empieza seccion de head -->
 
@@ -35,8 +37,43 @@
   <!--Fotos outfits -->
 
   <div class="container">
+    <div class="outfit-completo">
+        <div class="cabeza">
+            <img src="/static/uploads/gorrito-mea-culpa.png" alt="Gorrito Mea Culpa" data-info=" sigma skibidi">
+        </div>
+        <div class="torso">
+            <img src="/static/uploads/buzo.png" alt="Buzo" data-info="Información sobre el buzo.">
+        </div>
+        <div class="piernas">
+            <img src="/static/uploads/jogging.png" alt="Jogging" data-info="Información sobre el jogging.">
+        </div>
+        <div class="pies">
+            <img src="/static/uploads/zapas.png" alt="Zapas" data-info="Información sobre las zapas.">
+        </div>
+    </div>
 
+    <div class="outfit-completo">
+      <div class="cabeza">
+          <img src="/static/uploads/gorrito-mea-culpa.png" alt="Gorrito Mea Culpa" data-info="Información sobre el gorrito Mea Culpa.">
+      </div>
+      <div class="torso">
+          <img src="/static/uploads/buzo.png" alt="Buzo" data-info="Información sobre el buzo.">
+      </div>
+      <div class="piernas">
+          <img src="/static/uploads/jogging.png" alt="Jogging" data-info="Información sobre el jogging.">
+      </div>
+      <div class="pies">
+          <img src="/static/uploads/zapas.png" alt="Zapas" data-info="Información sobre las zapas.">
+      </div>
+    </div>
+
+<!-- Ventana Modal -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+      <span class="close">&times;</span>
+      <p id="modalText"></p>
   </div>
-  
-</body>
+</div>
+
+<script src="/static/scripts/script-prenda.js"></script>
 </html>
